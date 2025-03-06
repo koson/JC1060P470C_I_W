@@ -14,8 +14,16 @@ The file `1-Demo/Demo_IDF/examples/readme/readme.txt` explains the changes to be
 
 ## working examples
 ### 1-Demo/Demo_IDF/examples/lvgl_demo_v9
+Contrary to what the README in this folder tells, the firmware is adapted to run on the JC1060P470_P4 hardware (not the espressif devkit).  
 I updated the managed component to the versions available at 06/03/2025
-display works fine, touch is scaled.
+
+Result: display works fine, touch is scaled.
+
+With the board attached to the com port:
+```sh
+cd 1-Demo/Demo_IDF/examples/lvgl_demo_v9
+idf.py flash
+```
 
 
 ## display configuration
