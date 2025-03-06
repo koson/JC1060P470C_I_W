@@ -3,7 +3,6 @@ dependencies:
     component_hash: c8ac1998e9af863bc41b57e592f88d1a5791a0f891485122336ddabbf7a65033
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=5.0'
     - name: chmorgan/esp-libhelix-mp3
@@ -18,7 +17,6 @@ dependencies:
     component_hash: 327091394b9ef5c2cd395a960ab70ae64479e0a8831cbd9925e38895fad93719
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=4.1.0'
     source:
@@ -29,7 +27,6 @@ dependencies:
     component_hash: cbb76089dc2c5749f7b470e2e70aedc44c9da519e04eb9a67d4c7ec275229e53
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=4.1.0'
     source:
@@ -40,7 +37,6 @@ dependencies:
     component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=4.1'
     source:
@@ -87,7 +83,6 @@ dependencies:
     component_hash: 014948481bda426cd46714f297fe1891711246c62bea288863a8cc8cf13ef1f0
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=4.0'
     source:
@@ -95,7 +90,7 @@ dependencies:
       type: service
     version: 1.2.0
   espressif/esp_lcd_ek79007:
-    component_hash: 4c28dc20ceb8ae467b303b310a430aaf2b932cca98e75fb85d669a6c4b3e1be1
+    component_hash: 07c1afab7e9fd4dd2fd06ff9245e65327c5bbd5485efec199496e19a9304d47b
     dependencies:
     - name: espressif/cmake_utilities
       registry_url: https://components.espressif.com
@@ -109,7 +104,7 @@ dependencies:
       type: service
     targets:
     - esp32p4
-    version: 1.0.1
+    version: 1.0.2
   espressif/esp_lcd_ili9881c:
     component_hash: f4f374226b62baf13f735864e8fae58e17c537df34d598e059f6caad4761ef65
     dependencies:
@@ -122,11 +117,26 @@ dependencies:
     targets:
     - esp32p4
     version: 1.0.1
+  espressif/esp_lcd_jd9165:
+    component_hash: 3f94c9679299038c94c512bdc4b7cfa272d7d5bf78066e9213c737593db5b925
+    dependencies:
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    targets:
+    - esp32p4
+    version: 1.0.2
   espressif/esp_lcd_touch:
     component_hash: 779b4ba2464a3ae85681e4b860caa5fdc35801458c23f3039ee761bae7f442a4
     dependencies:
     - name: idf
-      registry_url: https://components.espressif.com
       require: private
       version: '>=4.4.2'
     source:
@@ -134,7 +144,7 @@ dependencies:
       type: service
     version: 1.1.2
   espressif/esp_lcd_touch_gt911:
-    component_hash: 145801c24c7ecfa2c43eea0dd5e87fd5bde5653eb9a48d619c7bad60b20a1acf
+    component_hash: f4c3a5b0970e6f8dd7810413cfb104d856f24c63420bb17f7a89ff37f68e30d8
     dependencies:
     - name: espressif/esp_lcd_touch
       registry_url: https://components.espressif.com
@@ -146,9 +156,9 @@ dependencies:
     source:
       registry_url: https://components.espressif.com
       type: service
-    version: 1.1.1~2
+    version: 1.1.2
   espressif/esp_lvgl_port:
-    component_hash: 41806031d90c91d50512d6f335f73978a1dd1aa1100ef5db40e189610be991ac
+    component_hash: bb938deffba7d80b2ce582a796c053681b0439e0a7033666688e0f1f5b921125
     dependencies:
     - name: idf
       require: private
@@ -160,7 +170,7 @@ dependencies:
     source:
       registry_url: https://components.espressif.com
       type: service
-    version: 2.4.3
+    version: 2.5.0
   idf:
     source:
       type: idf
@@ -176,8 +186,9 @@ direct_dependencies:
 - chmorgan/esp-audio-player
 - chmorgan/esp-file-iterator
 - espressif/esp32_p4_function_ev_board
+- espressif/esp_lcd_jd9165
 - idf
 - lvgl/lvgl
-manifest_hash: 8704a1ba5a8c50818c191689edf8406fbfaf24c7ded98adeb6b5ba9dd6b52448
+manifest_hash: 2bb243554546d3f1ff9be0b0eface1d0d6b80bed7a06702c30ea2d32dc028ca9
 target: esp32p4
 version: 2.0.0
