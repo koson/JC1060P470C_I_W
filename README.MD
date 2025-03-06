@@ -15,7 +15,7 @@ The file `1-Demo/Demo_IDF/examples/readme/readme.txt` explains the changes to be
 ## display configuration
 the display configuration can be found in `4-Driver_IC_Data_Sheet/MTK_JD9165BA_HKC7.0_IPS(QD070AS01-1)_1024x600_MIPI_1+2Dot_G2.2_20240729_andy_2lane.dtsi.txt`
 
-This needs 2 changes to the jd9165 driver files:
+This needs 2 changes to the jd9165 driver files (first one I had to change, second one was already correct):
 
 - in file `1-Demo/Demo_IDF/examples/lvgl_demo_v9/managed_components/espressif__esp_lcd_jd9165/include/esp_lcd_jd9165.h`
 ```c
