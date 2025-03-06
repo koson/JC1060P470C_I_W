@@ -12,6 +12,12 @@ This repository is a work in progress to fix these examples.
 ## changes to standard espressif examples
 The file `1-Demo/Demo_IDF/examples/readme/readme.txt` explains the changes to be done to the standard expressif examples to support this hardware.
 
+## working examples
+### 1-Demo/Demo_IDF/examples/lvgl_demo_v9
+I updated the managed component to the versions available at 06/03/2025
+display works fine, touch is scaled.
+
+
 ## display configuration
 the display configuration can be found in `4-Driver_IC_Data_Sheet/MTK_JD9165BA_HKC7.0_IPS(QD070AS01-1)_1024x600_MIPI_1+2Dot_G2.2_20240729_andy_2lane.dtsi.txt`
 
