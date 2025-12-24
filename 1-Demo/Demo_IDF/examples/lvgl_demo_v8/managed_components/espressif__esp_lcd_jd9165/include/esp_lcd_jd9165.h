@@ -73,7 +73,7 @@ esp_err_t esp_lcd_new_panel_jd9165(const esp_lcd_panel_io_handle_t io, const esp
     {                                                    \
         .bus_id = 0,                                     \
         .num_data_lanes = 2,                             \
-        .phy_clk_src = MIPI_DSI_PHY_CLK_SRC_DEFAULT,     \
+        .phy_clk_src = 0,                                \
         .lane_bit_rate_mbps = 750,                       \
     }
 
@@ -99,25 +99,26 @@ esp_err_t esp_lcd_new_panel_jd9165(const esp_lcd_panel_io_handle_t io, const esp
  */
 #define JD9165_1024_600_PANEL_60HZ_DPI_CONFIG(px_format) \
     {                                                    \
-        .dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT,             \
-        .dpi_clock_freq_mhz = 58,                                \
-        .virtual_channel = 0,                                    \
-        .pixel_format = px_format,                               \
-        .num_fbs = 1,                                            \
-        .video_timing = {                                        \
-            .h_size = 1024,                                      \
-            .v_size = 600,                                       \
-            .hsync_back_porch = 160,                             \
-            .hsync_pulse_width = 40,                             \
-            .hsync_front_porch = 160,                            \
-            .vsync_back_porch = 23,                              \
-            .vsync_pulse_width = 10,                              \
-            .vsync_front_porch = 12,                             \
-        },                                                       \
-        .flags.use_dma2d = true,                                 \
+        .dpi_clk_src = MIPI_DSI_DPI_CLK_SRC_DEFAULT,     \
+        .dpi_clock_freq_mhz = 50,                        \
+        .virtual_channel = 0,                            \
+        .pixel_format = px_format,                       \
+        .num_fbs = 1,                                    \
+        .video_timing = {                                \
+            .h_size = 1024,                              \
+            .v_size = 600,                               \
+            .hsync_back_porch = 136,                     \
+            .hsync_pulse_width = 20,                     \
+            .hsync_front_porch = 160,                    \
+            .vsync_back_porch = 12,                      \
+            .vsync_pulse_width = 2,                      \
+            .vsync_front_porch = 20,                     \
+        },                                               \
+        .flags.use_dma2d = true,                         \
     }
-#endif
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif

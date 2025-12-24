@@ -58,6 +58,16 @@ menuconfig > Component config > Board Support Package
 
 Build the project and flash it to the board, then run monitor tool to view serial output (replace `PORT` with your board's serial port name):
 
+
+
+```bash
+$env:PATH = "C:\Espressif\python_env\idf5.5_py3.13_env\Scripts;C:\Espressif\tools\ninja\1.12.1\;C:\Espressif\tools\cmake\3.30.2\bin;C:\Espressif\tools\riscv32-esp-elf\esp-14.2.0_20241119\riscv32-esp-elf\bin;C:\Windows\System32;C:\Windows;C:\Program Files\Git\cmd"
+$env:IDF_PATH = "C:\Users\koson\esp\v5.5.1\esp-idf"
+cd "D:\GitHubRepos\__AES\__ESP32_HMI_IPS\Ref_Repos_Sub_Module\JC1060P470C_I_W\1-Demo\Demo_IDF\examples\lvgl_demo_v9"
+python.exe "C:\Users\koson\esp\v5.5.1\esp-idf\tools\idf.py" build
+```
+
+
 ```c
 idf.py -p PORT flash monitor
 ```
